@@ -1,0 +1,26 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h3>Quiz - Registrar Usuário</h3>        
+        <p>Seja bem-vindo! Preencha o cadastro para participar!</p>
+        
+        <form action="registrar_usuario.jsp" method="post">
+            Primeiro nome: <input type="text" name="primeiro_nome" style="margin-left: 13px;"> <br>
+            Sobrenome: <input type="text" name="sobrenome" style="margin-left: 36px;"> <br>
+            Sexo: 
+                <input type="radio" name="sexo" value="F" style="margin-left: 77px;">Feminino       
+                <input type="radio" name="sexo" value="M">Masculino <br>
+            Nome de usuário: <input type="text" name="nome_usuario"> <br>
+            Senha: <input type="password" name="senha" style="margin-left: 70px;"> <br><br>       
+            <input type="submit" value="Registrar">
+        </form>
+    </body>
+</html>
