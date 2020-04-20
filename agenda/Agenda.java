@@ -91,7 +91,7 @@ public class Agenda {
     public ArrayList listarColecao(){
         ArrayList colecao = new ArrayList();
         Contato contato;
-        String sql = "SELECT * FROM agenda";
+        String sql = "SELECT * FROM livro";
         
         try {
             stmt = con.prepareStatement(sql);

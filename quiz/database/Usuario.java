@@ -40,6 +40,7 @@ public class Usuario {
         try {
             ps = con.prepareStatement(sql);
             ps.setString(1, nome_usuario);
+            rs = ps.executeQuery();
             rs.next();
             
             qtde = rs.getInt("qtde");
@@ -56,7 +57,7 @@ public class Usuario {
     }
     
     public int inserir(String primeiro_nome, String sobrenome, char sexo, 
-            String nome_usuario, String senha){
+        String nome_usuario, String senha){
         String sql = "INSERT INTO usuario VALUES (?,?,?,?,?)";
         
         try {

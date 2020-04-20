@@ -1,0 +1,133 @@
+body{
+    margin: 0 0 0 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#divLogo{
+    width: 100%; 
+    height: 130px; 
+}
+
+#logo{
+    font-weight: bold;
+    text-align: center;
+    font-family:Tahoma, Geneva, sans-serif;
+    padding-top: 40px;
+    color: #0086b3;
+}
+
+#divBar{
+    background: #0086b3;
+    width: 100%;
+    height: 50px;
+}
+
+#txtPesquisar{
+    float: left;
+    width: 90%;
+    margin-left: 10px;
+    height: 30px;
+    margin-top: 7px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#txtUsuario{
+    height: 30px;
+    margin-top: 4px;
+    text-align: center;
+    font-size: 16px;
+    width: 30%;
+    margin-right: 10px;
+    margin-left: 180px;
+}
+
+#txtSenha{
+    height: 30px;
+    margin-top: 4px;
+    text-align: center;
+    font-size: 16px;
+    width: 30%;
+    margin-right: 10px;
+}
+
+#btnSearch{
+    margin-top: 8px;
+    margin-left: 10px;
+    width: 34px;
+    background: white;
+    border-radius: 4px;
+}
+
+#btnSearch:hover{
+    background: #b3e0ff;
+}
+
+#btnLogin{
+    background: white;
+    border-radius: 4px;
+    margin-top: 5px;
+    width: 34px;
+    float: right;
+    margin-right: 10px;
+}
+
+#btnLogin:hover{
+    background: #b3e0ff;
+}
+
+#btnErroLogin{
+    padding: 10px;
+    text-decoration: none;
+    background-color: #0086b3;
+    color: white;
+}
+
+#btnErroLogin:hover{
+    background-color: #808080;
+    color: white;
+}
+
+.menu {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0086b3;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.menu a{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+}
+
+.menu a:hover{
+    background-color: #808080;
+    color: white;
+}
+
+.conteudo{
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+.btnAdmin {
+    padding: 10px;
+    text-decoration: none;
+    background-color: #0086b3;
+    color: white;
+    border: none !important;
+}
+
+.btnAdmin:hover {
+    background-color: #808080;
+    color: white;    
+}
+

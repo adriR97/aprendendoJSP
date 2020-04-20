@@ -1,0 +1,49 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Usuários</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="estilo.css">
+        
+        <script>
+            function validar(){
+                var x = document.forms["formUser"]["usuario"].value;
+                var y = document.forms["formUser"]["senha"].value;
+                
+                if (x == "" || x == null) {
+                    alert("Preencha o campo usuário");
+                    return false;
+                } else if(y == "" || y == null){
+                    alert("Preencha o campo senha");
+                    return false;
+                }
+            }            
+        </script>
+    </head>
+    <body>
+        <div class="menu">
+            <a href="livro.jsp">Livros</a>
+            <a href="editora.html">Editoras</a>
+            <a href="usuario.html">Usuários</a>
+        </div>
+        
+        <div class="conteudo">            
+            <form action="usuario.jsp" method="post" name="formUser"
+                  style="margin-top: 200px; margin-left: 430px;" 
+                  onsubmit="return validar()">
+                <h3>Cadastrar novo usuário</h3>
+                <b>Usuário: </b>
+                <input type="text" name="usuario" placeholder="Usuário" 
+                       style="text-align: center; margin-left: 9px; width: 200px;"> <br>
+                <b>Senha: </b>
+                <input type="password" name="senha" placeholder="Senha" 
+                       style="text-align: center; margin-left: 20px; width: 200px;"> <br><br>
+                <input type="submit" value="Cadastrar" class="btnAdmin">
+            </form>          
+        </div>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editoras</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="estilo.css">
+        
+        <script>
+            function validar(){
+                var x = document.forms["formEditora"]["editora"].value;
+                var y = document.forms["formEditora"]["cidade"].value;
+                
+                if (x == "" || x == null) {
+                    alert("Preencha o campo Editora");
+                    return false;
+                } else if(y == "" || y == null){
+                    alert("Preencha o campo Cidade");
+                    return false;
+                }
+            }            
+        </script>
+    </head>
+    <body>
+        <div class="menu">
+            <a href="livro.jsp">Livros</a>
+            <a href="editora.html">Editoras</a>
+            <a href="usuario.html">Usuários</a>
+        </div>
+        <div class="conteudo">
+            <form action="editora.jsp" method="post" name="formEditora"
+                  style="margin-top: 200px; margin-left: 430px;" 
+                  onsubmit="return validar()">
+                <h3>Cadastrar nova Editora</h3>
+                <b>Editora: </b>
+                <input type="text" name="editora" placeholder="Editora" 
+                       style="text-align: center; margin-left: 18px; width: 200px;"> <br>
+                <b>Cidade: </b>
+                <input type="text" name="cidade" placeholder="Cidade" 
+                       style="text-align: center; margin-left: 20px; width: 200px;"> <br><br>
+                <input type="submit" value="Cadastrar Editora" class="btnAdmin">
+            </form> 
+        </div>
+    </body>
+</html>
