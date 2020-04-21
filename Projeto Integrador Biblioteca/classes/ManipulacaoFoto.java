@@ -73,6 +73,7 @@ public class ManipulacaoFoto extends HttpServlet {
             } else {
                 mensagem = "Não foi possível atualizar o livro";
             }
+            
         }    
         
         request.setAttribute("Mensagem", mensagem);

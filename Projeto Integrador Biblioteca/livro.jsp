@@ -30,15 +30,52 @@
             th, td {
                 padding: 15px;
             }
+            
+            #filtroLivro{
+                background-image: url('imagens/iconSearch.png');
+                background-position: 280px 3px;
+                background-repeat: no-repeat;
+                float: right;
+                padding: 10px;
+                border: 1px solid #ddd;
+                width: 300px;
+            }
         </style>
+        
+        <script>
+            function filtrarLivros() {
+                var input, filter, table, tr, td, i, texto;
+                input = document.getElementById("filtroLivro");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("tabelaDeLivros");
+                tr = table.getElementsByTagName("tr");
+
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="menu">
             <a href="livro.jsp">Livros</a>
             <a href="editora.html">Editoras</a>
             <a href="usuario.html">Usuários</a>
-        </div>
-        <div class="conteudo" style="text-align: center; margin-bottom: 50px">            
+        </div>        
+        <div class="conteudo" style="text-align: center; margin: 20px 0 50px 160px">  
+            <a href="addLivro.jsp" class="btnAdmin" style="float: left; margin-bottom: 10px;">
+                Adicionar Livro
+            </a>
+            <input type="text" id="filtroLivro" onkeyup="filtrarLivros()" 
+                   placeholder="Pesquise pelo título">
             
             <%
                 ArrayList colecao;
@@ -48,7 +85,7 @@
                 if(colecao != null){              
             %>
             
-                    <table style="margin-top: 100px">
+                    <table style="margin-top: 100px" id="tabelaDeLivros">
                         <tr>
                             <th>Título</th>
                             <th>Editora</th>
@@ -94,9 +131,6 @@
                 conexao.fechar();
             %>          
             
-        </div>
-        <a href="addLivro.jsp" class="btnAdmin" style="margin-left: 170px;">
-            Adicionar Livro
-        </a>
+        </div>        
     </body>
 </html>
