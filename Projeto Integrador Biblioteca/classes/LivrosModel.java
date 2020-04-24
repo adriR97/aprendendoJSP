@@ -35,7 +35,7 @@ public class LivrosModel {
             while(rs.next()){
                 livro = new LivrosBean(rs.getInt("id"), rs.getInt("idEditora"), 
                         rs.getString("nome"), rs.getString("titulo"), rs.getString("autor"),
-                        rs.getInt("ano"), rs.getDouble("preco"), rs.getString("foto"));
+                        rs.getInt("ano"), rs.getDouble("preco"), rs.getBlob("foto"));
                 colecao.add(livro);
             }
             

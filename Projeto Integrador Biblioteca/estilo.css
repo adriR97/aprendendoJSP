@@ -6,18 +6,19 @@ body{
 #divLogo{
     width: 100%; 
     height: 130px; 
+    background-color: #0086b3;
 }
 
 #logo{
     font-weight: bold;
     text-align: center;
     font-family:Tahoma, Geneva, sans-serif;
-    padding-top: 40px;
-    color: #0086b3;
+    padding-top: 50px;
+    color: white;
 }
 
 #divBar{
-    background: #0086b3;
+    background: #333;
     width: 100%;
     height: 50px;
 }
@@ -30,50 +31,6 @@ body{
     margin-top: 7px;
     text-align: center;
     font-size: 16px;
-}
-
-#txtUsuario{
-    height: 30px;
-    margin-top: 4px;
-    text-align: center;
-    font-size: 16px;
-    width: 30%;
-    margin-right: 10px;
-    margin-left: 180px;
-}
-
-#txtSenha{
-    height: 30px;
-    margin-top: 4px;
-    text-align: center;
-    font-size: 16px;
-    width: 30%;
-    margin-right: 10px;
-}
-
-#btnSearch{
-    margin-top: 8px;
-    margin-left: 10px;
-    width: 34px;
-    background: white;
-    border-radius: 4px;
-}
-
-#btnSearch:hover{
-    background: #b3e0ff;
-}
-
-#btnLogin{
-    background: white;
-    border-radius: 4px;
-    margin-top: 5px;
-    width: 34px;
-    float: right;
-    margin-right: 10px;
-}
-
-#btnLogin:hover{
-    background: #b3e0ff;
 }
 
 #btnErroLogin{
