@@ -54,15 +54,37 @@
                 height: 200px;
                 margin: 0px auto;
                 margin-top: 20px;
-                background: #99ff99;
             }
             .coluna {
                 float: left;
-                width: 25%;
+                width: 23%;
                 padding: 10px;
-                border: 1px solid black;
+                border: 0px solid black;
+                font-size: 12px;
+                text-align: center;
             }
         </style>
+        <script>
+            function filtrarLivros() {
+                var input, filter, table, div, a, i, texto;
+                input = document.getElementById("filtroLivro");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("conteudo");
+                div = table.getElementsByTagName("div");
+
+                for (i = 0; i < div.length; i++) {
+                    a = div[i].getElementsByTagName("a")[0];
+                    if (a) {
+                        texto = a.textContent || a.innerText;
+                        if (texto.toUpperCase().indexOf(filter) > -1) {
+                            div[i].style.display = "";
+                        } else {
+                            div[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script>
     </head>
     <body style="margin-top: -20px;">
         <div id="divLogo">
@@ -90,22 +112,14 @@
         <%
             for(int i=0; i<colecao.size(); i++){
                 livro = (LivrosBean)colecao.get(i);
-                Blob blob = (Blob)livro.getFoto();
-                InputStream in = blob.getBinaryStream();
-                StringBuilder ret = new StringBuilder();
-                int lidos=0;
-                byte[] buffer = new byte[2048];
-                String temp = null;
-                while ( (lidos=in.read(buffer)) != -1){
-                    temp = new String(buffer,0,lidos);
-                    ret.append(temp);
-                    String ret2;
-                    ret2 = ret.toString();
-                }
-}
+                
         %>   
             
                 <div class="coluna">
+                    <img width="200px" height="300px" src="getImagem.jsp?id= <%= livro.getId() %> "/> <br>
+                    <a><%= livro.getTitulo() %><br></a>
+                    <%= livro.getAutor() %><br>
+                    <b style="font-size: 16px">R$<%= livro.getPreco() %></b><br>
                 </div>
                 
         <%

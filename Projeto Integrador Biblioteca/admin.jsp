@@ -34,6 +34,7 @@
                         <a href="livro.jsp">Livros</a>
                         <a href="editora.html">Editoras</a>
                         <a href="usuario.html">Usuários</a>
+                        <a href="fechaSessao" style="margin-top: 420px">Sair</a>
                     </div>
         
                     <div class="conteudo" style="text-align: center">
@@ -47,7 +48,7 @@
                     
                     <div style="text-align: center; margin-top: 270px;">
                         <h3>Usuário ou senha incorretos</h3>
-                        <a href="index.jsp" id="btnErroLogin">Voltar para página inicial</a>
+                        <a href="index.jsp" id="btnAdmin">Voltar para página inicial</a>
                     </div>
             
             <%  }  

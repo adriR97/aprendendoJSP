@@ -4,7 +4,6 @@
  */
 package classes;
 
-import com.mysql.jdbc.Blob;
 
 /**
  *
@@ -18,10 +17,9 @@ public class LivrosBean {
     String autor;
     int ano;
     double preco;
-    Blob foto;
     
     public LivrosBean(int id, int idEditora, String editora,String titulo, String autor,
-    int ano, double preco, java.sql.Blob foto){
+    int ano, double preco){
         this.id = id;
         this.idEditora = idEditora;
         this.editora = editora;
@@ -29,7 +27,6 @@ public class LivrosBean {
         this.autor = autor;
         this.ano = ano;
         this.preco = preco;
-        this.foto = (Blob) foto;
     }
 
     public int getId() {
@@ -58,9 +55,5 @@ public class LivrosBean {
     
     public double getPreco(){
         return preco;
-    }
-    
-    public java.sql.Blob getFoto(){
-        return foto;
     }
 }
