@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package classes;
 
 import java.io.IOException;
@@ -79,10 +75,5 @@ public class ManipulacaoFoto extends HttpServlet {
         request.setAttribute("Mensagem", mensagem);
         getServletContext().getRequestDispatcher("/resultado.jsp").forward(request, response);
     }
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 }
